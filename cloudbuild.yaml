@@ -9,7 +9,7 @@ steps:
     '-a',
     'public-read',
     '-h',
-    'Cache-Control:no-cache'
+    'Cache-Control:no-cache',
     'index.html',
     'app.js',
     'gs://${_UPLOAD_BUCKET}/create-sjis-csv'

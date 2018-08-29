@@ -5,13 +5,13 @@ steps:
   args: ['build']
 - name: 'gcr.io/cloud-builders/gsutil'
   args: [
+    '-h',
+    'Cache-Control:no-cache',
     'cp',
     '-z',
     'html,js',
     '-a',
     'public-read',
-    '-h',
-    'Cache-Control:no-cache',
     'index.html',
     'app.js',
     'gs://${_UPLOAD_BUCKET}/create-sjis-csv'

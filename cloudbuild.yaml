@@ -1,0 +1,14 @@
+steps:
+- name: 'gcr.io/cloud-builders/gsutil'
+  args: [
+    'cp',
+    '-z',
+    'html,js',
+    '-a',
+    'public-read',
+    '-h',
+    'Cache-Control:no-cache'
+    'index.html',
+    'app.js',
+    'gs://${_UPLOAD_BUCKET}/create-sjis-csv'
+  ]

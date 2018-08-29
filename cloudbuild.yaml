@@ -1,4 +1,6 @@
 steps:
+- name: 'gcr.io/cloud-builders/yarn'
+  args: ['build']
 - name: 'gcr.io/cloud-builders/gsutil'
   args: [
     'cp',
